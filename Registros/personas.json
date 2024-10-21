@@ -6,7 +6,7 @@
         "edad": 45,
         "titulo": "Ingeniero",
         "facultad": "UTN",
-        "añoGraduacion": 2002
+        "anioGraduacion": 2002
     },
     {
         "id": 2,
@@ -15,7 +15,7 @@
         "edad": 35,
         "titulo": "Medico",
         "facultad": "UBA",
-        "añoGraduacion": 2001
+        "anioGraduacion": 2001
     },
     {
         "id": 3,
@@ -24,7 +24,7 @@
         "edad": 30,
         "titulo": "Abogado",
         "facultad": "UCA",
-        "añoGraduacion": 2017
+        "anioGraduacion": 2017
     },
     {
         "id": 4,

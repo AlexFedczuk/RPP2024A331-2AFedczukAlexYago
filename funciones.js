@@ -25,7 +25,7 @@ export function generarPersonasDesdeJSON(jsonString) {
         personaData.cantidadGoles
       );
       personas.push(futbolista);
-    } else if (personaData.titulo && personaData.facultad && personaData.añoGraduacion) {
+    } else if (personaData.titulo && personaData.facultad && personaData.anioGraduacion) {
       // Es un Profesional
       const profesional = new Profesional(
         personaData.id,
@@ -34,7 +34,7 @@ export function generarPersonasDesdeJSON(jsonString) {
         personaData.edad,
         personaData.titulo,
         personaData.facultad,
-        personaData.añoGraduacion
+        personaData.anioGraduacion
       );
       personas.push(profesional);
     }
@@ -68,7 +68,7 @@ export function mostrarPersonasEnTabla(personas) {
       <td>${persona.cantidadGoles !== undefined ? persona.cantidadGoles : "--"}</td>
       <td>${persona.titulo || "--"}</td>
       <td>${persona.facultad || "--"}</td>
-      <td>${persona.añoGraduacion !== undefined ? persona.añoGraduacion : "--"}</td>
+      <td>${persona.anioGraduacion !== undefined ? persona.anioGraduacion : "--"}</td>
     `;
 
     // Agregamos la fila al cuerpo de la tabla
@@ -104,7 +104,7 @@ export function calcularPromedio(personas) {
   if (personas.length === 0) return 0;
 
   const sumaValores = personas
-    .map(persona => persona.cantidadGoles !== undefined ? persona.cantidadGoles : persona.añoGraduacion)
+    .map(persona => persona.cantidadGoles !== undefined ? persona.cantidadGoles : persona.anioGraduacion)
     .reduce((suma, valor) => suma + valor, 0);  // Sumamos los goles o los años de graduación
 
   return sumaValores / personas.length; // Calculamos el promedio
@@ -134,7 +134,7 @@ export function mostrarFormularioABM(persona) {
     document.getElementById('cantidadGoles').value = persona.cantidadGoles !== undefined ? persona.cantidadGoles : '';
     document.getElementById('titulo').value = persona.titulo || '';
     document.getElementById('facultad').value = persona.facultad || '';
-    document.getElementById('añoGraduacion').value = persona.añoGraduacion || '';
+    document.getElementById('anioGraduacion').value = persona.anioGraduacion || '';
 
     // Mostramos el botón "Modificar" y ocultamos "Agregar"
     document.getElementById('btn-alta').style.display = 'none';
@@ -150,7 +150,7 @@ export function mostrarFormularioABM(persona) {
     document.getElementById('cantidadGoles').value = '';
     document.getElementById('titulo').value = '';
     document.getElementById('facultad').value = '';
-    document.getElementById('añoGraduacion').value = '';
+    document.getElementById('anioGraduacion').value = '';
 
     // Mostramos el botón "Agregar" y ocultamos "Modificar"
     document.getElementById('btn-alta').style.display = 'inline-block';
